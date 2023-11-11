@@ -34,9 +34,10 @@ class Database
         }
     }
     //insert data
-    public function insert($table, $params=array()){
-        if($this->tableExist($table)){
-            echo" Working";
+    public function insert($table, $params = array())
+    {
+        if ($this->tableExist($table)) {
+            echo " Working";
         }
     }
 
@@ -51,7 +52,7 @@ class Database
             if ($tableIndb->num_rows == 1) {
                 return true;
             } else {
-                array_push($this->result, $table . "Does not exist");
+                array_push($this->result, $table . " Does not exist");
             }
         } else {
             return false;
